@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Bar } from '../bar';
 
 @Component({
   selector: 'app-bars',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bars.component.css']
 })
 export class BarsComponent implements OnInit {
+  bar: Bar = {
+    id: 1,
+    name: 'Icon'
+  };
 
   constructor() { }
 
