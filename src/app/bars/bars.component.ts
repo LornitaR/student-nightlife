@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Bar } from '../bar';
+import { BarService } from '../bar.service';
 
 @Component({
   selector: 'app-bars',
@@ -7,14 +8,17 @@ import { Bar } from '../bar';
   styleUrls: ['./bars.component.css']
 })
 export class BarsComponent implements OnInit {
-  bar: Bar = {
-    id: 1,
-    name: 'Icon'
-  };
+  bars: Bar [];
 
-  constructor() { }
+  constructor(private barService: BarService) { }
 
   ngOnInit() {
+    this.getBars();
+  }
+
+  getBars(): void {
+    this.barService.getAllBars()
+        .subscribe(bars => this.bars = bars);
   }
 
 }
