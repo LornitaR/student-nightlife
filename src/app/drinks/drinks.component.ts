@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Drink} from '../drink'
+import {Drink} from '../drink';
 
 @Component({
   selector: 'app-drinks',
