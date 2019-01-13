@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Bar } from '../bar';
-import { BarService } from '../bar.service';
+import { Bar } from '../common/interfaces/bar';
+import { BarService } from '../bar-service/bar.service';
 
 @Component({
   selector: 'app-bars',
@@ -18,7 +18,7 @@ export class BarsComponent implements OnInit {
 
   getBars(): void {
     this.barService.getAllBars()
-        .subscribe(bars => this.bars = bars);
+        .subscribe((bars: Bar []) => this.bars = bars);
   }
 
 }
