@@ -15,7 +15,6 @@ export class ListItemComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log(changes);
   }
 
 }
