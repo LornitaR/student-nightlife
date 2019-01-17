@@ -1,8 +1,14 @@
-export interface Bar {
+import { Listable } from './listable';
+
+export interface Bar extends Listable {
     id: number;
-    name: string;
 }
 
 export interface BarServiceResponse {
-    bars: Bar [];
+    bars: BarDBObject [];
+}
+
+export interface BarDBObject {
+    bar_id: number;
+    bar_name: string;
 }
