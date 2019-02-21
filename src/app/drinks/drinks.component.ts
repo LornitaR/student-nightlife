@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Drink} from '../common/interfaces/drink';
+import { Drink } from '../common/interfaces/drink';
+import { DrinkService } from '../drink-service/drink.service';
 
 @Component({
   selector: 'app-drinks',
@@ -7,17 +8,16 @@ import {Drink} from '../common/interfaces/drink';
   styleUrls: ['./drinks.component.css']
 })
 export class DrinksComponent implements OnInit {
+  drinks: Drink [];
 
-  drink: Drink = {
-    drink_id: 1,
-    bar_id: 1,
-    name: 'Rum',
-    price: 7.50
-  };
-
-  constructor() { }
+  constructor(private drinkService: DrinkService) { }
 
   ngOnInit() {
+    this.getDrinks();
   }
 
+  getDrinks(): void {
+    this.drinkService.getAllDrinks()
+        .subscribe((drinks: Drink []) => this.drinks = drinks);
+  }
 }
