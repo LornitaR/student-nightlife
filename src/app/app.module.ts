@@ -8,6 +8,7 @@ import { DrinksComponent } from './drinks/drinks.component';
 import { UsersComponent } from './users/users.component';
 import { ListComponent } from './common/list/list.component';
 import { ListItemComponent } from './common/list-item/list-item.component';
+import { MaterialDesignModule } from './material-design/material-design.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ListItemComponent } from './common/list-item/list-item.component';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    MaterialDesignModule
   ],
   providers: [],
   bootstrap: [AppComponent]
