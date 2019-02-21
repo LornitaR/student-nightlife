@@ -27,10 +27,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/colours.scss",
+              "src/assets/global-styles.scss"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/jquery/dist/jquery.min.js"
             ]
           },
           "configurations": {

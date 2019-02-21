@@ -1,0 +1,27 @@
+@import '../styles/colours.scss';
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "header header header header"
+      "main main main main"
+      "footer footer footer footer";
+}
+
+.main-header {
+  grid-area: header;
+  background-color: $dark-background;
+  text-align: center;
+  color: $white;
+}
+
+.content {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: footer;
+}
+  
