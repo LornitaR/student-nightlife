@@ -1,6 +1,8 @@
 <div class="container">
   <div class="main-header">Find a Bar</div>
-  <div *ngFor='let bar of bars'> 
-      <div>{{bar.name}}</div>
+  <div class="content">
+    <div *ngFor='let bar of bars'>
+      <div class="bar-content">{{bar.name}}</div>
+    </div>
   </div>
 </div>

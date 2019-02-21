@@ -1,1 +1,6 @@
-@import '../../assets/styles/global-layout.scss'
+@import '../../assets/styles/global-layout.scss';
+
+.bar-content {
+    color: $dark-background;
+    text-align: center;
+}
