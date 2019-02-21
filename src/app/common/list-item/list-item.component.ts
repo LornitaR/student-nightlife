@@ -4,7 +4,7 @@ import { Listable } from '../interfaces/listable';
 @Component({
   selector: 'app-list-item',
   templateUrl: './list-item.component.html',
-  styleUrls: ['./list-item.component.css']
+  styleUrls: ['./list-item.component.scss']
 })
 export class ListItemComponent implements OnInit, OnChanges {
   @Input() item: Listable;

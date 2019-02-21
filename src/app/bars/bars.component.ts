@@ -5,7 +5,7 @@ import { BarService } from '../bar-service/bar.service';
 @Component({
   selector: 'app-bars',
   templateUrl: './bars.component.html',
-  styleUrls: ['./bars.component.css']
+  styleUrls: ['./bars.component.scss']
 })
 export class BarsComponent implements OnInit {
   bars: Bar [];
