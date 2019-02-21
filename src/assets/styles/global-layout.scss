@@ -1,6 +1,7 @@
 @import '../styles/colours.scss';
 
 .container {
+    padding: 0px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
