@@ -1,5 +1,8 @@
 <div class="container">
-  <div class="main-header">Find a Bar</div>
+  <div class="main-header">
+    <div class="title">Find a Bar</div><br />
+    <app-search-box [options]="barNames" placeholder="Search for a bar" (selectOption)="search($event)"></app-search-box>
+  </div>
   <div class="content">
     <div *ngFor='let bar of bars'>
       <div class="bar-content">{{bar.name}}</div>
