@@ -1,0 +1,25 @@
+.header {
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 1;
+    grid-template-areas: 
+      "back title menu";
+}
+
+.back-button {
+    grid-area: back;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-button {
+    grid-area: menu;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    grid-area: title;
+}

@@ -1,11 +1,12 @@
-<div class="container">
-  <div class="main-header">
-    <div class="title">Find a Bar</div><br />
+<app-page>
+  <header>
+    <app-header title="Find a Bar"></app-header>
+  </header>
+  <content>
     <app-search-box [options]="barNames" placeholder="Search for a bar" (selectOption)="search($event)"></app-search-box>
-  </div>
-  <div class="content">
+    <hr />
     <div *ngFor='let bar of bars'>
       <div class="bar-content">{{bar.name}}</div>
     </div>
-  </div>
-</div>
+  </content>
+</app-page>

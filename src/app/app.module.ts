@@ -11,6 +11,8 @@ import { ListItemComponent } from './common/list-item/list-item.component';
 import { MaterialDesignModule } from './material-design/material-design.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchBoxComponent } from './common/search-box/search-box.component';
+import { PageComponent } from './common/page/page.component';
+import { HeaderComponent } from './common/header/header.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { SearchBoxComponent } from './common/search-box/search-box.component';
     UsersComponent,
     ListComponent,
     ListItemComponent,
-    SearchBoxComponent
+    SearchBoxComponent,
+    PageComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
