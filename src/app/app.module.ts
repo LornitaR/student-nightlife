@@ -11,6 +11,8 @@ import { ListItemComponent } from './common/list-item/list-item.component';
 import { MaterialDesignModule } from './material-design/material-design.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchBoxComponent } from './common/search-box/search-box.component';
+import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { SearchBoxComponent } from './common/search-box/search-box.component';
     SearchBoxComponent
   ],
   imports: [
+    RouterModule,
+    AppRoutingModule,
     BrowserModule,
     MaterialDesignModule,
     HttpClientModule,
