@@ -21,7 +21,6 @@ export class SearchBoxComponent implements OnInit {
     this.iconRegistry.addSvgIcon('search', this.sanitizer.bypassSecurityTrustResourceUrl('/assets/images/baseline-search.svg'));
     this.searchBoxControl = new FormControl();
     this.searchBoxControl.valueChanges.subscribe((value: string) => {
-      console.log(value);
       this.filteredOptions = filter(this.options, (option: string) => includes(option, value));
     });
   }
