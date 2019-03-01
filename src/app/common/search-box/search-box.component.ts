@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { filter, includes } from 'lodash';
+import { filter, includes, lowerCase } from 'lodash';
 import { MatIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 
@@ -21,7 +21,7 @@ export class SearchBoxComponent implements OnInit {
     this.iconRegistry.addSvgIcon('search', this.sanitizer.bypassSecurityTrustResourceUrl('/assets/images/baseline-search.svg'));
     this.searchBoxControl = new FormControl();
     this.searchBoxControl.valueChanges.subscribe((value: string) => {
-      this.filteredOptions = filter(this.options, (option: string) => includes(option, value));
+      this.filteredOptions = filter(this.options, (option: string) => includes(lowerCase(option), lowerCase(value)));
     });
   }
 
