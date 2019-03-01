@@ -15,14 +15,20 @@ export class DrinkService {
   getAllDrinks(): Observable<Drink[]> {
     return this.http.get<DrinkServiceResponse>('http://localhost:64001/drinkinfo')
       .pipe(map((response: DrinkServiceResponse) => {
-        return _.map(response.drinks, (drink: DrinkDBObject) => ({ name: drink.drink_name }));
+        return _.map(response.drinks, (drink: DrinkDBObject) => ({
+          name: drink.drink_name,
+          price: drink.price
+        }));
       }));
   }
 
   getDrinks(barId: number): Observable<Drink[]> {
     return this.http.get<DrinkServiceResponse>(`http://localhost:64001/bars/${barId}/drinks`)
       .pipe(map((response: DrinkServiceResponse) => {
-        return _.map(response.drinks, (drink: DrinkDBObject) => ({ name: drink.drink_name }));
+        return _.map(response.drinks, (drink: DrinkDBObject) => ({
+          name: drink.drink_name,
+          price: drink.price
+        }));
       }));
   }
 }

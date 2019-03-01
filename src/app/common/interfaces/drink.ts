@@ -2,6 +2,7 @@ import { Listable } from './listable';
 export interface Drink extends Listable {
     drink_id: number;
     bar_id: number;
+    price: number;
 }
 
 export interface DrinkServiceResponse {
