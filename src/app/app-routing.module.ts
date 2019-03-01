@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BarsComponent } from './bars/bars.component';
+import { BarComponent } from './bar/bar.component';
 
 const routes: Routes = [
     {
@@ -11,6 +12,10 @@ const routes: Routes = [
     {
         path: 'bars',
         component: BarsComponent
+    },
+    {
+        path: 'bars/:barId/drinkinfo',
+        component: BarComponent
     }
 ];
 

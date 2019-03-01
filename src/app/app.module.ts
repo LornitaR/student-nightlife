@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchBoxComponent } from './common/search-box/search-box.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
+import { BarComponent } from './bar/bar.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { RouterModule } from '@angular/router';
     UsersComponent,
     ListComponent,
     ListItemComponent,
-    SearchBoxComponent
+    SearchBoxComponent,
+    BarComponent
   ],
   imports: [
     RouterModule,

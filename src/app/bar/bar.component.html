@@ -1,0 +1,10 @@
+<div *ngIf="bar" class="container">
+  <div class="main-header">
+    <div class="title">{{bar.name}}</div><br />
+  </div>
+  <div class="content">
+    <div *ngFor='let drink of drinks'>
+      <div class="bar-content">{{drink.name}}</div>
+    </div>
+  </div>
+</div>

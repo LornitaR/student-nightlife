@@ -4,11 +4,15 @@ export interface Bar extends Listable {
     id: number;
 }
 
-export interface BarServiceResponse {
+export interface BarResponse {
+    bar: BarDBObject;
+}
+export interface BarsResponse {
     bars: BarDBObject [];
 }
 
 export interface BarDBObject {
     bar_id: number;
     bar_name: string;
+    description?: string;
 }
