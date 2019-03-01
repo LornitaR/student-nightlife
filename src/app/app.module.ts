@@ -9,6 +9,8 @@ import { UsersComponent } from './users/users.component';
 import { ListComponent } from './common/list/list.component';
 import { ListItemComponent } from './common/list-item/list-item.component';
 import { MaterialDesignModule } from './material-design/material-design.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SearchBoxComponent } from './common/search-box/search-box.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { MaterialDesignModule } from './material-design/material-design.module';
     DrinksComponent,
     UsersComponent,
     ListComponent,
-    ListItemComponent
+    ListItemComponent,
+    SearchBoxComponent
   ],
   imports: [
     BrowserModule,
+    MaterialDesignModule,
     HttpClientModule,
-    MaterialDesignModule
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,18 @@
+<form class="search-box">
+  <mat-form-field appearance="outline">
+    <mat-icon matPrefix svgIcon="search"></mat-icon>
+    <input 
+      type="text" 
+      matInput 
+      [placeholder]="placeholder" 
+      [formControl]="searchBoxControl"
+      [matAutocomplete]="searchBox">
+    <mat-autocomplete 
+      autoActiveFirstOption 
+      #searchBox="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions" [value]="option" (click)="onOptionSelected(option)">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>

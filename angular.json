@@ -28,8 +28,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/assets/colours.scss",
-              "src/assets/global-styles.scss"
+              "src/assets/styles/colours.scss",
+              "src/assets/styles/global-layout.scss"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js"
